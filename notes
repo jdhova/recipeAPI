@@ -1,0 +1,42 @@
+const express = require("express")
+const app = express()
+const axios = require("axios")
+
+const app_id = "3878314d"
+const app_key = "c6248a322d3159ee9dd5275b1825a76c"
+
+app.get("/searchRecipe", function(req, res) {
+    
+})
+
+app.post("/searchRecipe", function(req,res){
+    var searchTerm = ...
+    axios.get(`https://api.edamam.com/search`, {
+        params: {
+            q: searchTerm,
+            app_id: app_id,
+            app_key: app_key
+        }
+    }
+    .then((result)=> {
+        console.log(result.data)
+        res.send(result.data.hits[0].recipe)
+    })
+    .catch((err)=> {
+        debugger
+        res.send("ERROR")
+    })
+
+})
+
+app.listen(3000)
+
+steps 
+step 1 create a connection with axious on the app.js to find how to connect to the API  
+step 2 we create an index with a search bar like we did with the movies to searh 
+step 3 create an app.get route for the search bar
+step 4 create a post request for the search 
+step 5 then connect the API to find the search 
+
+
+res.render a page with html and sections 

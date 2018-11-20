@@ -1,0 +1,61 @@
+{{!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+   <form method="post" action="/post-user-data">
+            <h3>Search Resipe</h3>
+                    Search Recipe:<br>
+        <input type="text" name="searchrecipe"><br>
+        <button type="submit">Submit</button>
+</form>
+    
+</body> 
+</html> --}}
+<h3>Recipe Labels</h3>
+{{!-- {{#each search}}
+    {{#each this.recipe.label}}
+    {{/each}}
+{{/each}}
+
+     --}}
+    {{!-- {{#each this.recipe.calories}}
+    {{/each}}
+{{/each}} --}}
+
+
+{{#each search}}
+        <h2>Recipe name: {{this.recipe.label}}</h2>
+        <img src={{this.recipe.image}} alt="">
+        <p>Ingredients: {{this.recipe.ingredientLines}}</p>
+        
+{{/each}}
+
+
+
+
+
+{{!-- 
+
+<h3>ingredients</h3>
+{{#each search}}
+    {{this.recipe.label}}
+{{/each}}
+
+<h3>Cautions</h3>
+{{#each search}}
+    {{this.recipe.cautions}}
+{{/each}} --}}
+
+
+ {{!-- {{#if author}}
+    <h1>{{firstName}} {{lastName}}</h1>
+  {{/if}}
+ --}}
+
+ 
